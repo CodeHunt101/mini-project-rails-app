@@ -1,0 +1,10 @@
+<h1>EDIT POKEMON</h1>
+<%= form_for(@pokemon) do |f|%>
+  <label>Pokemon name:</label><br>
+  <%= f.text_field :name %><br>
+  
+  <label>Pokemon image url:</label><br>
+  <%= f.text_area :image %><br>
+  
+  <%= f.submit %>
+<%end%>

@@ -1,0 +1,4 @@
+<h3><b>Name: </b><%=@pokemon.name.capitalize%></h5>
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/<%=@pokemon.id%>.svg">
+<h3>Types:</h3>
+<h3><%=Pokemon.find_by(id:1).types.map{|t| t.name.capitalize}.join(" - ")%></h3>

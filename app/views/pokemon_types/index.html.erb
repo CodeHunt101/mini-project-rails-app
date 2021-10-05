@@ -1,0 +1,8 @@
+<h1>POKEMON TYPES</h1>
+<ul>
+  <%@pokemon_types.each do |pokemon_type|%>
+    <li>
+      <%=link_to pokemon_type.print, edit_pokemon_type_path(pokemon_type.id)%>
+    </li>
+  <%end%>
+</ul>

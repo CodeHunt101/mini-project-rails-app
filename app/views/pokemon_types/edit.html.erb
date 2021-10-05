@@ -1,0 +1,10 @@
+<h1>EDIT POKEMON TYPE</h1>
+<%= form_for(@pokemon_type) do |f|%>
+  <label>Pokemon: <%=Pokemon.find_by(id: @pokemon_type.pokemon_id).name %></label><br>
+
+  <label>Type Id:</label><br>
+  <%= f.text_field :type_id %><br>
+
+  <%= f.submit %>
+
+<%end%>
