@@ -4,7 +4,9 @@ class PokemonTypesController < ApplicationController
   end
   
   def edit
-    @pokemon_type = PokemonType.find(params[:id])
+    # binding.pry
+    # @pokemon_type = PokemonType.find(params[:id])
+    @pokemon_type = PokemonType.joins(:pokemon).select('pokemon_types.*,pokemons.name').find(params[:id])
   end
 
   def update
